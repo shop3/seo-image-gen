@@ -41,8 +41,8 @@ async function generateSeoImage({
   const textMetadata = await textImage.metadata();
   const textHeight = textMetadata.height || 0;
   const textWidth = textMetadata.width || 0;
-  const textTop = (800 - textHeight) / 2;
-  const textBottom = (800 - textHeight) / 2;
+  const textTop = Math.round((800 - textHeight) / 2);
+  const textBottom = 800 - textHeight - textTop;
   const textLeft = 1200 - textWidth - 100;
   const textRight = 100;
   textImage.extend({
@@ -87,6 +87,7 @@ async function generateSeoImage({
       },
     });
 
+  // compose image
   backgroundImage
     .composite([
       {
