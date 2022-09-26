@@ -1,0 +1,41 @@
+{
+  "name": "@shop3/seo-image-gen",
+  "version": "0.0.0",
+  "description": "Generate simple SEO images with logo and title.",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "build": "tsc --project tsconfig.build.json",
+    "release": "standard-version",
+    "lint": "eslint --fix .",
+    "lint:staged": "eslint --fix",
+    "husky:install": "husky install",
+    "pre-commit": "lint-staged",
+    "commit-msg": "commitlint --edit",
+    "prepublishOnly": "npm run build"
+  },
+  "peerDependencies": {
+    "sharp": "^0.31.0"
+  },
+  "devDependencies": {
+    "@types/sharp": "^0.31.0",
+    "@commitlint/cli": "^16.2.3",
+    "@commitlint/config-conventional": "^16.2.1",
+    "@typescript-eslint/eslint-plugin": "^5.21.0",
+    "@typescript-eslint/parser": "^5.21.0",
+    "eslint": "^8.14.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.4.1",
+    "prettier": "^2.6.2",
+    "standard-version": "^9.3.2",
+    "typescript": "^4.6.3"
+  }
+}
