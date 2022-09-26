@@ -1,6 +1,6 @@
 {
   "name": "@shop3/seo-image-gen",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Generate simple SEO images with logo and title.",
   "license": "MIT",
   "main": "lib/index.js",
